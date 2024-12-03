@@ -48,7 +48,6 @@
   </style>
 </head>
 <body>
-  <script src="javascript/on-page-scripts/content-security-policy.js" ></script>
   <script>
     const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbybzRtGgZnTg3NAjanYlFAMhZA0va2FZ6mnTQKwQgnpf2cAc-89RA36d6iv8ySwNGq4ZA/exec";
     
@@ -56,7 +55,7 @@
     var k = url.substr(url.lastIndexOf("k=")+2);
     
     if(k){
-      fetch(AS_URL_BASE+'?k='+k)
+      var response = UrlFetchApp.fetch(AS_URL_BASE+'?k='+k)
       .then(r => r.text())
       .then((r) => {
         console.log(r);
