@@ -49,6 +49,9 @@
 </head>
 <body>
   <script>
+    const cors=require('cors')
+    app.use(cors())
+    
     const AS_URL_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScaELqy7To8lc4wM5_-mDdYyRK0NIgdKiWlAZSRkPjlKzQu3A/viewform?usp=pp_url&entry.1401816536=";
     
     var url = document.location.href;
