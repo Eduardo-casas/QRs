@@ -56,8 +56,7 @@
     var k = url.substr(url.lastIndexOf("k=")+2);
     
     if(k){
-      var response = UrlFetchApp.fetch(AS_URL_BASE)
-        console.log(response)
+      fetch(AS_URL_BASE+'?k='+k)
       .then(r => r.text())
       .then((r) => {
         console.log(r);
